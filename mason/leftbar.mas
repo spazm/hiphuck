@@ -1,0 +1,38 @@
+<%args>
+	$page_id
+</%args>
+<%perl>
+my @names = ( 
+	index => "Index"       ,
+	bios  => "Biographies" ,
+	philo => "Philosophy"  ,
+	music => "Music"       ,
+    photos => "Photos"     ,
+);
+</%perl>
+
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td width="150" align="center">
+			<table width="150" border="0" cellpadding="0" cellspacing="0">
+
+	% foreach my $page (@pages) {
+				<tr valign="middle">
+					<td width="16"><img src="spacer.gif" alt="" width="16" height="1" border="0"></td>
+					<td width="134"><a href="<% $page %>.html" class="nav"><% $name{$page}</a></td>
+				</tr>
+				<tr>
+					<td height="7" colspan="2"><img src="spacer.gif" width="150" height="7"></td>
+				</tr>
+	}
+			</table>
+			<br>
+			<img src="lorax.gif" alt="" width="92" height="204" border="0">
+			<p>
+			<img src="http://banners.wunderground.com/banner/infoboxtr_both/language/www/US/HI/Honolulu_International.gif" width=144 height=108>
+		</td>
+		<td width="10">
+			<img src="spacer.gif" alt="" width="10" height="1" border="0">
+		</td>
+		<td width="600" align="center">
+

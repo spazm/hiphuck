@@ -1,0 +1,6 @@
+<%args>
+$text
+</%args>
+% if( $text ) {
+<div class="title" align="center"><% $text %></div>
+% }
