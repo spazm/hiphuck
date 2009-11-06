@@ -28,7 +28,7 @@ find( \&convert, $source );
 sub convert {
   # We don't want to try to convert our autohandler or .mas
   # components.  $_ contains the filename
-  return unless /\.html$/;
+  return unless (/\.html$/ or /\.css$/);
 
   my $buffer;
   # This will save the component's output in $buffer
