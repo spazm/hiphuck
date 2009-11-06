@@ -16,15 +16,15 @@ my @names = (
 		<td width="150" align="center">
 			<table width="150" border="0" cellpadding="0" cellspacing="0">
 
-	% foreach my $page (@pages) {
+% while( my ($page,$name)= splice(@names,0,2)) {
 				<tr valign="middle">
 					<td width="16"><img src="spacer.gif" alt="" width="16" height="1" border="0"></td>
-					<td width="134"><a href="<% $page %>.html" class="nav"><% $name{$page}</a></td>
+					<td width="134"><a href="<% $page %>.html" class="nav"><% $name %></a></td>
 				</tr>
 				<tr>
 					<td height="7" colspan="2"><img src="spacer.gif" width="150" height="7"></td>
 				</tr>
-	}
+%	}
 			</table>
 			<br>
 			<img src="lorax.gif" alt="" width="92" height="204" border="0">

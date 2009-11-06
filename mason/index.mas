@@ -1,5 +1,0 @@
-<& header.mas title => "Bid for Kaimana Klassik 23" &>
-<& leftbar.mas &>
-<& page_header.mas text => "hey hey!" %>
-Hello World!
-<& footer.mas &>
