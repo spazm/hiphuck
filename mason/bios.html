@@ -1,5 +1,26 @@
-<& lib/header.mas, title => "Hip Huck Team Bios" &>
-<& lib/leftbar.mas, page_id=>'bios' &>
-<& lib/page_header.mas, text => "Meet the Squad" &>
-Hello World!
+<& lib/header.mas,      title   => 'Hip Huck Team Bios' &>
+<& lib/leftbar.mas,     page_id => 'bios'               &>
+<& lib/page_header.mas, text    => 'Meet the Squad'     &>
+
+<%perl >
+my %photos = (
+	bret    => [qw( bret.jpg                         )],
+	Eyore   => [qw( eyore.jpg                        )],
+	Foca    => [qw( foca.jpg                         )],
+	Frantz  => [qw( frantz.jpg frantz2-jpg           )],
+	Hippo   => [qw( hippo-bigmouth.jpg               )],
+	Jameson => [qw( jameson.jpg                      )],
+	Kief    => [qw( keif-1.jpg kief-2.jpg kief-3.jpg )],
+	Matt    => [qw( matt.jpg                         )],
+	Simon   => [qw( simon-superman.jpg               )],
+	Stone   => [qw( stone.jpg                        )],
+);
+</%perl>
+% foreach my $name (sort(keys %photos)){
+% 	foreach my $image (@{ $photos{$name} ){
+	<img src="photos/<% $image %>" alt="<% $name %>" >
+%	}
+	<br>
+%}
+
 <& lib/footer.mas &>
