@@ -3,12 +3,12 @@
 </%args>
 <%perl>
 my @names = ( 
-	index  => { name => "The Truth"   , },
-	philo  => { name => "Philosophy"  , },
-	bios   => { name => "Biographies" , },
-	video  => { name => "Video"       , },
-    photos => { name => "Photography" , },
-	history => { name => "History" , url => '/2003' }
+	index   => { name => "The Truth"   , },
+	philo   => { name => "Philosophy"  , },
+	bios    => { name => "Biographies" , },
+	video   => { name => "Video"       , },
+    photos  => { name => "Photography" , },
+	history => { name => "History"    , },
 );
 </%perl>
 
