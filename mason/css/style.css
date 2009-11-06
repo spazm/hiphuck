@@ -23,21 +23,22 @@ a.nav:hover {
 	color: #fff;
 }
 a.nav2 {
-	font-size: 12px;
+	font-size: 14px;
 	text-align: left;
 	display: block;
-	padding: 3px 3px 3px 0.3em;
-	border-left: 7px solid #ffa49c;
-	border-right: 7px solid #ffa49c;
+	padding: 5px 5px 5px 0.5em;
+	border-left:  10px solid #5abeff;
+	border-right: 10px solid #5abeff;
 	background-color: #ef948c;
+
 	color: #fff;
 	text-decoration: none;
 	width: 100%;
 }
 html>body a.nav2 { width: auto; }
 a.nav2:hover {
-	border-left: 7px solid #1c64d1;
-	border-right: 7px solid #1c64d1;
+	border-left: 10px solid #1c64d1;
+	border-right: 10px solid #1c64d1;
 	background-color: #2586d7;
 	color: #fff;
 }
