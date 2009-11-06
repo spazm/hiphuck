@@ -3,11 +3,12 @@
 </%args>
 <%perl>
 my @names = ( 
-	index  => "The Truth"   ,
-	philo  => "Philosophy"  ,
-	bios   => "Biographies" ,
-	video  => "Video"       ,
-    photos => "Photography" ,
+	index  => { name => "The Truth"   , },
+	philo  => { name => "Philosophy"  , },
+	bios   => { name => "Biographies" , },
+	video  => { name => "Video"       , },
+    photos => { name => "Photography" , },
+	history => { name => "History" , url => '/2003' }
 );
 </%perl>
 
@@ -16,12 +17,14 @@ my @names = (
 		<td width="150" align="center">
 			<table width="150" border="0" cellpadding="0" cellspacing="0">
 
-% while( my ($page,$name)= splice(@names,0,2)) {
+% while( my ($page,$info)= splice(@names,0,2)) {
+% my $name  = $info->{name};
+% my $link  = exists $info->{url} ? $info->{url} : "${page}.html";
 % my $class = ($page_id && $page eq $page_id ) ? 'nav2' : 'nav'; 
 				<tr valign="middle">
 					<td width="16"><img src="images/spacer.gif" alt="" 
 						width="16" height="1" border="0"></td>
-					<td width="134"><a href="<% $page %>.html" 
+					<td width="134"><a href="<% $link %>" 
 						class="<% $class %>"><% $name %></a></td>
 				</tr>
 				<tr>
@@ -33,7 +36,7 @@ my @names = (
 			</table>
 			<br>
 			<img src="images/hippo.jpg" alt="" 
-				 width="92" height="204" border="0">
+				 width="92" height="92" border="0">
 			<p>
 			<img src="http://banners.wunderground.com/banner/infoboxtr_both/language/www/US/HI/Honolulu_International.gif" width=144 height=108>
 		</td>
